@@ -1,0 +1,4 @@
+- Managed with GNU Stow
+- Packages: shell, git, nvim, i3, i3status, htop, ranger, neofetch, mpv
+- Bootstrap: ./bootstrap/setup.sh
+- Wallpapers tracked under wallpapers/
