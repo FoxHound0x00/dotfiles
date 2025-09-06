@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/kunal/Pictures/wallpapers/k2.jpg' 
