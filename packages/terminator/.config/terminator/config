@@ -1,0 +1,16 @@
+[global_config]
+  suppress_multiple_term_dialog = True
+[profiles]
+  [[default]]
+    use_system_font = True
+    use_custom_command = False
+    scrollbar_position = hidden
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
