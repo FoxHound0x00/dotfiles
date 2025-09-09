@@ -5,6 +5,8 @@
     use_system_font = True
     use_custom_command = False
     scrollbar_position = hidden
+    background_type = transparent
+    background_darkness = 0.85
 [layouts]
   [[default]]
     [[[child1]]]

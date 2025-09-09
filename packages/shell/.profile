@@ -27,3 +27,10 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 export PATH="$HOME/.elan/bin:$PATH"
+
+# Application font scaling
+export GDK_SCALE=1.2
+export GDK_DPI_SCALE=1.0
+export QT_SCALE_FACTOR=1.2
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
+export XCURSOR_SIZE=24
