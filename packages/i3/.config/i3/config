@@ -349,7 +349,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym Print exec "./Downloads/Flameshot-12.1.0.x86_64.AppImage gui"
 
 #exec_always feh --bg-scale /home/kunal/Pictures/wp/6ca.jpg
-exec_always feh --bg-fill /home/kunal/.dotfiles/wallpapers/k2.jpg
+exec_always feh --bg-fill /home/sud/.dotfiles/wallpapers/k2.jpg
 
 exec --no-startup-id xinput set-prop "Synaptics TM3096-006" "libinput Tapping Enabled" 1
 exec --no-startup-id xinput set-prop "Synaptics TM3096-006" "libinput Natural Scrolling Enabled" 1
