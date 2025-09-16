@@ -262,6 +262,21 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+# Workspace assignments for dual monitor setup
+# Primary display (laptop) gets workspaces 1-5
+workspace $ws1 output eDP-1
+workspace $ws2 output eDP-1
+workspace $ws3 output eDP-1
+workspace $ws4 output eDP-1
+workspace $ws5 output eDP-1
+
+# HDMI display gets workspaces 6-10 when connected
+workspace $ws6 output HDMI-1-0 eDP-1
+workspace $ws7 output HDMI-1-0 eDP-1
+workspace $ws8 output HDMI-1-0 eDP-1
+workspace $ws9 output HDMI-1-0 eDP-1
+workspace $ws10 output HDMI-1-0 eDP-1
+
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -359,3 +374,16 @@ exec --no-startup-id xrandr --output eDP-1 --mode 2560x1600 --rate 240.00 --dpi 
 
 # Set environment variables for application scaling
 exec --no-startup-id "export GDK_SCALE=1.2 && export QT_SCALE_FACTOR=1.2"
+
+# HDMI Display Configuration
+# Auto-detect and setup HDMI when connected (run at startup)
+exec_always --no-startup-id ~/.config/i3/scripts/hdmi_setup.sh
+
+# Manual display management keybindings
+bindsym $mod+p exec --no-startup-id ~/.config/i3/scripts/display_menu.sh
+
+# Quick display mode switches
+bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/hdmi_extend.sh
+bindsym $mod+Ctrl+p exec --no-startup-id ~/.config/i3/scripts/hdmi_mirror.sh
+bindsym $mod+Alt+p exec --no-startup-id ~/.config/i3/scripts/hdmi_only.sh
+bindsym $mod+Ctrl+Alt+p exec --no-startup-id ~/.config/i3/scripts/laptop_only.sh

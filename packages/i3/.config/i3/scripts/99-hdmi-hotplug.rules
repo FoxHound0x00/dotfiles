@@ -1,0 +1,7 @@
+# HDMI Hotplug Detection Rule
+# Copy this file to /etc/udev/rules.d/ with sudo to enable automatic HDMI detection
+# sudo cp ~/.config/i3/scripts/99-hdmi-hotplug.rules /etc/udev/rules.d/
+# sudo udevadm control --reload-rules
+
+# Detect HDMI connection changes
+ACTION=="change", SUBSYSTEM=="drm", ENV{HOTPLUG}=="1", RUN+="/home/sud/.config/i3/scripts/hdmi_hotplug.sh"
